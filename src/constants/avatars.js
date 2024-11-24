@@ -1,24 +1,55 @@
-// Champion avatars from CDN
-export const CHAMPION_AVATARS = {
-    graves: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/104.png",
-    ziggs: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/115.png",
-    dar: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/122.png",
-    zac: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/154.png",
-    zoe: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/142.png",
-    kaisa: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/145.png",
-    camile: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/164.png",
-    galio: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/3.png",
-    thresh: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/412.png",
-    samira: "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/360.png",
-  };
-  
-  export const DEFAULT_AVATAR = "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/223.png";
-  
-  export const getLocalPhotos = () => {
-    try {
-      return import.meta.glob('../assets/player-photos/*');
-    } catch (error) {
-      console.warn('No local photos found');
-      return {};
-    }
-  };
+import e41Photo from '../assets/player-photos/641.png';
+import fanmePhoto from '../assets/player-photos/fanme.png';
+import gsyPhoto from '../assets/player-photos/gzy.png';
+import jwPhoto from '../assets/player-photos/jw.png';
+import leoPhoto from '../assets/player-photos/leo.png';
+import wkPhoto from '../assets/player-photos/wk.png';
+import yffPhoto from '../assets/player-photos/yff.png';
+import yhPhoto from '../assets/player-photos/yh.png';
+import gjnPhoto from '../assets/player-photos/zjn.png';
+import zzcPhoto from '../assets/player-photos/zzc.png';
+
+export const PLAYER_AVATARS = {
+  '641': {
+    url: e41Photo,
+    name: '641'
+  },
+  'fanme': {
+    url: fanmePhoto,
+    name: 'Fanme'
+  },
+  'gsy': {
+    url: gsyPhoto,
+    name: 'GSY'
+  },
+  'jw': {
+    url: jwPhoto,
+    name: 'JW'
+  },
+  'leo': {
+    url: leoPhoto,
+    name: 'Leo'
+  },
+  'wk': {
+    url: wkPhoto,
+    name: 'WK'
+  },
+  'yff': {
+    url: yffPhoto,
+    name: 'YFF'
+  },
+  'yh': {
+    url: yhPhoto,
+    name: 'YH'
+  },
+  'gjn': {
+    url: gjnPhoto,
+    name: 'GJN'
+  },
+  'zzc': {
+    url: zzcPhoto,
+    name: 'ZZC'
+  }
+};
+
+export const DEFAULT_AVATAR = e41Photo;

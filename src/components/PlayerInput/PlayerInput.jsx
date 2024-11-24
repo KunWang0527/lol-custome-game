@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { UserPlus, X } from 'lucide-react';
-import { CHAMPION_AVATARS, DEFAULT_AVATAR } from '../../constants/avatars';
+import { PLAYER_AVATARS, DEFAULT_AVATAR } from '../../constants/avatars';
 
 const PlayerInput = () => {
   const { players, addPlayer, removePlayer, gameStage, setGameStage } = useGame();
@@ -68,11 +68,11 @@ const PlayerInput = () => {
   const AvatarSelector = () => (
     <div className="absolute top-full mt-2 left-0 bg-white rounded-lg shadow-lg border p-4 z-10 w-[300px]">
       <div className="space-y-2">
-        <h3 className="text-sm font-medium text-muted-foreground mb-2">Champions</h3>
+        <h3 className="text-sm font-medium text-muted-foreground mb-2">Select Player Profile</h3>
         <div className="grid grid-cols-5 gap-2">
-          {Object.entries(CHAMPION_AVATARS).map(([name, url]) => (
+          {Object.entries(PLAYER_AVATARS).map(([key, { url, name }]) => (
             <button
-              key={name}
+              key={key}
               type="button"
               onClick={() => {
                 setSelectedAvatar(url);
